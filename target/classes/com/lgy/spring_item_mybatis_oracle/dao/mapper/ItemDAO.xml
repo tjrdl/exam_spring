@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lgy.spring_item_mybatis_oracle.dao.ItemDAO">
+
+    <insert id="write">
+    	insert into exam_board(name, price, description) values(#{param1},#{param2},#{param3})
+    </insert>
+    
+    <select id="list" resultType="com.lgy.spring_item_mybatis_oracle.dto.ItemDTO">
+        select name, price, description from exam_board
+    </select>
+        
+</mapper>
